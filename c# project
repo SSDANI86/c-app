@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication13
+{
+    class Program
+    {       
+            
+          static void CountOccurrences(int[] arr)
+            {
+                // استفاده از دیکشنری برای شمارش
+                Dictionary<int, int> occurrenceDict = new Dictionary<int, int>();
+
+                // پیمایش آرایه و شمارش هر عنصر
+                foreach (var element in arr)
+                {
+                    if (occurrenceDict.ContainsKey(element))
+                    {
+                        occurrenceDict[element]++;
+                    }
+                    else
+                    {
+                        occurrenceDict[element] = 1;
+                    }
+                }
+
+                // نمایش نتایج
+                foreach (var kvp in occurrenceDict)
+                {
+                    Console.WriteLine($"عنصر {kvp.Key} {kvp.Value} بار ظاهر شده است.");
+                }
+            }
+
+            static void Main()
+            {
+                // ورودی آرایه
+                int[] arr = { 1, 2, 2, 3, 3, 3, 4, 5, 5, 5, 5 };
+
+                // فراخوانی تابع
+                CountOccurrences(arr);
+            Console.ReadKey();
+            }
+        }
+    }
