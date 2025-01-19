@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication17
+{
+    class Program
+    
+        {
+            static void Main(string[] args)
+            {
+                Console.WriteLine("Enter four numbers:");
+
+                // Input numbers from the user
+                Console.Write("Enter number 1: ");
+                double num1 = double.Parse(Console.ReadLine());
+
+                Console.Write("Enter number 2: ");
+                double num2 = double.Parse(Console.ReadLine());
+
+                Console.Write("Enter number 3: ");
+                double num3 = double.Parse(Console.ReadLine());
+
+                Console.Write("Enter number 4: ");
+                double num4 = double.Parse(Console.ReadLine());
+
+                // Calculate average
+                double average = (num1 + num2 + num3 + num4) / 4;
+
+                // Print the result
+                Console.WriteLine($"The average is: {average}");
+            Console.ReadLine();
+            }
+        }
+    }
